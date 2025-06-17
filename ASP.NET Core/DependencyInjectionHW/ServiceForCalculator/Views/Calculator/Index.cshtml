@@ -1,0 +1,55 @@
+﻿@model double;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@{
+    Layout = null;
+}
+
+    <!--Дані надсилаються за допомогою запиту POST-->
+    <!--Form1 Plus-->
+    <form asp-action="Plus" method="post">
+        <input type="number" name="number1" />
+        <input type="number" name="number2" />
+        <button type="submit">
+            +
+        </button>
+    </form>
+    <!--Дані надсилаються за допомогою запиту POST-->
+    <!--Form2 Minus-->
+    <form asp-action="Subtract" method="post">
+    <input type="number" name="number1" />
+    <input type="number" name="number2" />
+        <button type="submit">
+            -
+        </button>
+    </form>
+
+    <!--Дані надсилаються за допомогою запиту POST-->
+    <!--Form3 Multiply-->
+    <form asp-action="Multiplay" method="post">
+    <input type="number" name="number1" />
+    <input type="number" name="number2" />
+        <button type="submit">
+            *
+        </button>
+    </form>
+
+    <!--Дані надсилаються за допомогою запиту POST-->
+    <!--Form4 Divide-->
+    <form asp-action="Divide" method="post">
+    <input type="number" name="number1" />
+    <input type="number" name="number2" />
+        <button type="submit">
+            /
+        </button>
+    </form>
+
+    <div>
+@*     Result: @Model
+    <input type="number" name="result" /> *@
+    <label>Result: </label>
+    <input type="number" readonly="true"  value=@Model />
+    </div>
