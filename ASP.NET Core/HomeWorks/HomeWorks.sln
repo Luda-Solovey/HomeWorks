@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceForCalculator", "Ser
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calendar", "Calendar\Calendar.csproj", "{8123C809-F61A-2738-999F-3E9F874C8A00}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindingModel", "BindingModel\BindingModel.csproj", "{BB80BE90-A64E-4711-88E6-E51ED405EFE3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{8123C809-F61A-2738-999F-3E9F874C8A00}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8123C809-F61A-2738-999F-3E9F874C8A00}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8123C809-F61A-2738-999F-3E9F874C8A00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB80BE90-A64E-4711-88E6-E51ED405EFE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB80BE90-A64E-4711-88E6-E51ED405EFE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB80BE90-A64E-4711-88E6-E51ED405EFE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB80BE90-A64E-4711-88E6-E51ED405EFE3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
