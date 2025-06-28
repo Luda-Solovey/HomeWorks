@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindingModel", "BindingMode
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08FormsAndValidation", "08FormsAndValidation\08FormsAndValidation.csproj", "{08798F7E-9780-4F44-AA48-15299762440E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08FormsAndValidationWithProduct", "08FormsAndValidationWithProduct\08FormsAndValidationWithProduct.csproj", "{61C3B291-D45B-1598-7E3D-34E6BF6BD1AD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{08798F7E-9780-4F44-AA48-15299762440E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08798F7E-9780-4F44-AA48-15299762440E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08798F7E-9780-4F44-AA48-15299762440E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61C3B291-D45B-1598-7E3D-34E6BF6BD1AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61C3B291-D45B-1598-7E3D-34E6BF6BD1AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61C3B291-D45B-1598-7E3D-34E6BF6BD1AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61C3B291-D45B-1598-7E3D-34E6BF6BD1AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

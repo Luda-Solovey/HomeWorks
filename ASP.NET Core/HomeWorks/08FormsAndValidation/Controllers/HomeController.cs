@@ -1,32 +1,39 @@
 using _08FormsAndValidation.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using _08FormsAndValidation.Infrastructure;
 
 namespace _08FormsAndValidation.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
-
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult Privacy()
+        [HttpGet]
+        public IActionResult Register()
         {
-            return View();
+            return View(new Client() { Date = DateTime.Now});
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        [HttpPost]
+        public IActionResult Register(Client client)
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            bool isDateValid = ValidateHelper.ValidateDate(client.Date);
+            if (!isDateValid)
+            {
+                ModelState.AddModelError("Date", "Registration date can be only in a feature and on work day");
+            }
+
+            if (ModelState.IsValid)
+            {                
+                return View("Success", client);
+            }
+
+            return View(client);        
         }
     }
 }
