@@ -41,7 +41,6 @@
     </div>
         <div>
             <select asp-for="SelectedProduct" asp-items="Html.GetEnumSelectList<Products>()"></select>
-            @* <input asp-for="SelectedProduct" /> *@
             <span asp-validation-for="SelectedProduct" class="text-danger"></span>
         </div>
 
