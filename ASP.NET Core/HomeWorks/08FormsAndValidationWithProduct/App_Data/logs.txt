@@ -1,0 +1,2 @@
+﻿Викликаний метод _08FormsAndValidation.Controllers.RegisterController.Register (08FormsAndValidationWithProduct), час виклику - 10.07.2025 18:34:26
+Викликаний метод _08FormsAndValidation.Controllers.RegisterController.Register (08FormsAndValidationWithProduct), час виклику - 10.07.2025 18:35:03

@@ -7,6 +7,7 @@ namespace _08FormsAndValidation.Controllers
 {
     public class RegisterController : Controller
     {
+        [DataAboutActions]
         [HttpGet]
         public IActionResult Register()
         {
@@ -14,6 +15,7 @@ namespace _08FormsAndValidation.Controllers
             //return View();
         }
 
+        [DataAboutActions]
         [HttpPost]
         public IActionResult Register(RecordViewModel client)
         {
