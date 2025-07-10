@@ -1,0 +1,77 @@
+﻿@using _08FormsAndValidation.Models;
+@model RecordViewModel;
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Реєстрація</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body class="card-body">
+
+
+    <form asp-controller="Register" asp-action="Register" method="post">
+    <div>
+            @* байндінг працює і без атрибута asp-for в полі input*@
+            <label>Name</label>
+            
+            @* для того, щоб відпрацьовувала валідація на стороні клієнта (js), поле input повинно мати атрибут asp-for *@
+            @* без цієї умови валідація працює тільки на стороні сервера *@
+            <input asp-for="Name" />
+
+            <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="LastName" ></label>
+        <input asp-for="LastName" />
+        <span asp-validation-for="LastName" class="text-danger"></span>
+
+    </div>
+    <div>
+        <label asp-for="Email">Email</label>
+        <input asp-for="Email" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Date"></label>
+        <input asp-for="Date" />
+        <span asp-validation-for="Date" class="text-danger"></span>
+    </div>
+        <div>
+            <select asp-for="SelectedProduct" asp-items="Html.GetEnumSelectList<Products>()"></select>
+            <span asp-validation-for="SelectedProduct" class="text-danger"></span>
+        </div>
+
+    <button type="submit">Зареєструватися</button>
+</form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+
+@* ТАК ТАКОЖ ПРАЦЮЄ
+    <form asp-action="Register" method="post">
+    <div>
+        <label>Name</label>
+        <input name="Name" />
+    </div>
+    <div>
+        <label asp-for="LastName">LastName</label>
+        <input asp-for="LastName"/>
+        
+    </div>
+    <div>
+        <label>Email</label>
+        <input asp-for="Email"/>
+    </div>
+    <div>
+        <label>Дата консультації</label>
+        <input asp-for="Date" type="Date" />
+    </div>
+    <button type="submit">Зареєструватися</button>
+</form> *@
+
+
+</body>
+</html>
