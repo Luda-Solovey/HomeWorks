@@ -1,0 +1,25 @@
+﻿@model EmailModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Реєстрація</title>
+</head>
+<body>
+    <form asp-action="SendEmail" method="post">
+        <div>
+            <label>Recipient</label>
+            <input asp-for="Recipient" />
+        </div>
+        <div>
+            <label>Theme</label>
+            <input asp-for="Theme" />
+        </div>
+        <div>
+            <label>Message</label>
+            <input asp-for="Message" />
+        </div>
+    </form>
+</body>
+</html>

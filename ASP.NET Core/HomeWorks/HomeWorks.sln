@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08FormsAndValidation", "08F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08FormsAndValidationWithProduct", "08FormsAndValidationWithProduct\08FormsAndValidationWithProduct.csproj", "{61C3B291-D45B-1598-7E3D-34E6BF6BD1AD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigurationsHomeWork1", "ConfigurationsHomeWork1\ConfigurationsHomeWork1.csproj", "{0F59F85D-F569-42D7-8E9D-FE9519E45C41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigurationsHomeWork2", "ConfigurationsHomeWork2\ConfigurationsHomeWork2.csproj", "{170D76B0-2804-418F-81D5-291102568894}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{61C3B291-D45B-1598-7E3D-34E6BF6BD1AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61C3B291-D45B-1598-7E3D-34E6BF6BD1AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61C3B291-D45B-1598-7E3D-34E6BF6BD1AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F59F85D-F569-42D7-8E9D-FE9519E45C41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F59F85D-F569-42D7-8E9D-FE9519E45C41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F59F85D-F569-42D7-8E9D-FE9519E45C41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F59F85D-F569-42D7-8E9D-FE9519E45C41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{170D76B0-2804-418F-81D5-291102568894}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{170D76B0-2804-418F-81D5-291102568894}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{170D76B0-2804-418F-81D5-291102568894}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{170D76B0-2804-418F-81D5-291102568894}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
