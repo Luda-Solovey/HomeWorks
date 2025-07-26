@@ -12,6 +12,7 @@ namespace ConfigurationsHomeWork1.ConfogurationModel
 
         public  IDictionary<string, InternetModel> Internet {  get; set; }
 
+
         //public IDictionary<string, ProfileData> Profiles { get; set; }
 
     }

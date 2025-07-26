@@ -1,25 +1,26 @@
 ﻿@model EmailModel
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <title>Реєстрація</title>
-</head>
-<body>
+@{
+    Layout = "_Layout";
+}
     <form asp-action="SendEmail" method="post">
         <div>
             <label>Recipient</label>
-            <input asp-for="Recipient" />
+        <input asp-for="Recipient" class="form-control" value="lsolovey@ama.dp.ua" />
         </div>
         <div>
             <label>Theme</label>
-            <input asp-for="Theme" />
+        <input asp-for="Theme" class="form-control" value="SomeText" />
         </div>
         <div>
             <label>Message</label>
-            <input asp-for="Message" />
+        <input asp-for="Message" class="form-control" placeholder="Enter your message..." value="SomeText" />
+            @* <span asp-validation-for="Message" class="text-danger"></span> *@
+
+         @*    <input asp-for="Message" class="form-control" />
+            <span asp-validation-for="Message" class="text-danger"></span> *@
+
+        </div>
+        <div>
+            <button type="submit" class="form-control">Відправити</button>
         </div>
     </form>
-</body>
-</html>

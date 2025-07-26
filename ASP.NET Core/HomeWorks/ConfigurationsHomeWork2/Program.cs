@@ -1,3 +1,9 @@
+using ConfigurationsHomeWork2.Controllers;
+using ConfigurationsHomeWork2.Models;
+using ConfigurationsHomeWork2.Services;
+using System.Net;
+using System.Net.Mail;
+
 namespace ConfigurationsHomeWork2
 {
     public class Program
@@ -14,6 +20,24 @@ namespace ConfigurationsHomeWork2
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.Configure<EmailSettingsModel>(builder.Configuration.GetSection("SmtpSettings"));
+            //зв'язую секції конфігураційного класу з властивостями класу
+            //var networkSettings = builder.Configuration.GetSection("SmtpSettings").Get<SmtpSettingsModel>() ?? 
+            //    throw new ArgumentException("Configuration for SMTP Client has not been read");
+            ////  builder.Services.Configure<EmailSettingsModel>(builder.Configuration.GetSection("EmailSettings"));
+            ////  TODO Comine in one method - builder.Configuration.AddSmtpClient() 
+            //var credentials = new NetworkCredential(networkSettings.Credentials.SenderEmail, networkSettings.Credentials.Password);
+            //builder.Services.AddSingleton(services => new SmtpClient(networkSettings.SmtpServer)
+            //{
+            //    Port = networkSettings.Port,
+            //    Credentials = credentials,
+            //    EnableSsl = networkSettings.EnableSsl,
+            //    UseDefaultCredentials = false,
+            //});
+
+            //винесла підключення SMTPClient в статичний клас SMTPClientConection
+            builder.Services.AddSmtpClient(builder);// так можна? щоб метод приймав вхідним параметром екземпляр WebApplicationBuilder?
 
             var app = builder.Build();
 

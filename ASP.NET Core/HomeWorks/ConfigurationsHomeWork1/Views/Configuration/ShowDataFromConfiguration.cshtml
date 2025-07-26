@@ -3,5 +3,23 @@
 
 <p>Рядок підключення: @Model.ConnectionString </p>
 <p>Login: @Model.Login</p>
-<p>Internet: @Model.Internet</p>
-<p>Server: @Model.Servers </p>
+<p>Internet: </p>
+<ul>
+    @foreach (var item in Model.Internet)
+    {
+        var temp = $"Name={item.Value?.Name} Source={item.Value?.Source}";
+
+        <li>
+            @temp
+        </li>
+    }
+</ul>
+<p>Server:  </p>
+<ul>
+   @foreach(var item in Model.Servers)
+   {
+        var serv = $"Port {item.Port}, Host {item.Host}, Sll {item.Ssl}";
+
+       <li>@serv</li>
+   }
+</ul>

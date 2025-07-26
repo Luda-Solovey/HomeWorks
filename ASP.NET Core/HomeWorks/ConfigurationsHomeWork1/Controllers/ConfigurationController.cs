@@ -21,6 +21,7 @@ namespace ConfigurationsHomeWork1.Controllers
             mod.Login = ConnectionModel.Value.Login;
             mod.Internet = ConnectionModel.Value.Internet;
             mod.Servers = ConnectionModel.Value.Servers;
+            
             return View(mod);
         }
     }
