@@ -6,15 +6,15 @@ namespace ConfigurationsHomeWork2.Services
 {
     public static class SMTPClientConection
     {
-        public static IServiceCollection AddSmtpClient (this IServiceCollection services, WebApplicationBuilder builder)
+        public static IServiceCollection AddSmtpClient(this IServiceCollection services, IConfiguration configuration)
         {
             //зв'язую секції конфігураційного класу з властивостями класу
-            var networkSettings = builder.Configuration.GetSection("SmtpSettings").Get<SmtpSettingsModel>() ??
+            var networkSettings = configuration.GetSection("SmtpSettings").Get<SmtpSettingsModel>() ??
                 throw new ArgumentException("Configuration for SMTP Client has not been read");
             //  builder.Services.Configure<EmailSettingsModel>(builder.Configuration.GetSection("EmailSettings"));
             //  TODO Comine in one method - builder.Configuration.AddSmtpClient() 
             var credentials = new NetworkCredential(networkSettings.Credentials.SenderEmail, networkSettings.Credentials.Password);
-            builder.Services.AddSingleton(services => new SmtpClient(networkSettings.SmtpServer)
+            services.AddSingleton(services => new SmtpClient(networkSettings.SmtpServer)
             {
                 Port = networkSettings.Port,
                 Credentials = credentials,
