@@ -37,7 +37,7 @@ namespace ConfigurationsHomeWork2
             //});
 
             //винесла підключення SMTPClient в статичний клас SMTPClientConection
-            builder.Services.AddSmtpClient(builder);// так можна? щоб метод приймав вхідним параметром екземпляр WebApplicationBuilder?
+            builder.Services.AddSmtpClient(builder.Configuration);// так можна? щоб метод приймав вхідним параметром екземпляр WebApplicationBuilder?
 
             var app = builder.Build();
 
