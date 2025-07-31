@@ -28,7 +28,9 @@ namespace _12_AutentificationAvtorization.Controllers
             {
                 Id = Guid.NewGuid(),
                 Theme = model.Theme,
-                Body = model.Body
+                Body = model.Body,
+                UserName = User.Identity!.Name!
+
             };
             DataBaseNotes.Notes.Add(newNote);
 
@@ -44,8 +46,11 @@ namespace _12_AutentificationAvtorization.Controllers
         [Authorize(Roles = "User")]
         public IActionResult ShowNotes()
         {
-            var notes = DataBaseNotes.Notes;
+
+            var notes = DataBaseNotes.Notes.Where(n => n.UserName == User.Identity!.Name).ToList();
+
             return View("ShowNotes", notes);
+
         }
     }
 }

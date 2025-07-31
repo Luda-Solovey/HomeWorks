@@ -46,6 +46,7 @@ namespace _12_AutentificationAvtorization.Controllers
                 return View("SuccessfulyRegistered");
             }
             return View();
+            //this.User.Identity.Name
         }
 
         [HttpGet]
